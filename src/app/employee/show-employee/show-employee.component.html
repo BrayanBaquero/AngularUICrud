@@ -2,7 +2,7 @@
 <button type="button" class="btn btn-primary float-right m-2" data-bs-toggle="modal" 
 data-bs-target="#exampleModal" (click)="addClick()"
 data-backdrop="static" data-keyboard="false">
-    Add Student
+    Add Employee
   </button>
   
   <!-- Modal -->
@@ -15,7 +15,7 @@ data-backdrop="static" data-keyboard="false">
           (click)="closeClick()"></button>
         </div>
         <div class="modal-body">
-            <app-add-edit-student [st]="st" *ngIf="ActivateAddEditStudentComp"></app-add-edit-student>
+            <app-add-edit-employee [st]="st" *ngIf="ActivateAddEditEmployeeComp"></app-add-edit-employee>
         </div>
         
       </div>
@@ -30,7 +30,7 @@ data-backdrop="static" data-keyboard="false">
             <th>
               <!--Filtro para bucar en tabla-->
               <div class="d-flex flex-row">
-                <input [(ngModel)]="StudentIdFilter" class="form-control"
+                <input [(ngModel)]="EmployeeIdFilter" class="form-control"
                 (keyup)="FilterFn()" placeholder="Filter">
             <!--Ordenar resultados-->
                 <button type="button" class="btn btn-light" (click)="sortResult('id',true)">
@@ -46,10 +46,10 @@ data-backdrop="static" data-keyboard="false">
                   </svg>
                 </button>
               </div>
-              StudentId</th>
+              EmployeeId</th>
             <th>
               <div class="d-flex flex-row">
-                <input [(ngModel)]="StudentNameFilter" class="form-control"(keyup)="FilterFn()" placeholder="Filter">
+                <input [(ngModel)]="EmployeeNameFilter" class="form-control"(keyup)="FilterFn()" placeholder="Filter">
                 <!--Ordenar resultados-->
                 <button type="button" class="btn btn-light" (click)="sortResult('Name',true)">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
@@ -66,24 +66,17 @@ data-backdrop="static" data-keyboard="false">
                 
               </div>
               Name</th>
-            <th>LastName</th>
-            <th>Age</th>
-            <th>Phone</th>
-            <th>City</th>
             <th>Email</th>
-            <th>Option</th>
+            <th>Deparment</th>
 
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let dataItem of Students">
+        <tr *ngFor="let dataItem of Employees">
             <td>{{dataItem.id}}</td>
             <td>{{dataItem.Name}}</td>
-            <td>{{dataItem.LastName}}</td>
-            <td>{{dataItem.Age}}</td>
-            <td>{{dataItem.PhoneNumber}}</td>
-            <td>{{dataItem.City}}</td>
             <td>{{dataItem.Email}}</td>
+            <td>{{dataItem.Deparment}}</td>
             <td>
                 <button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" 
                 data-bs-target="#exampleModal" (click)="editClick(dataItem)"

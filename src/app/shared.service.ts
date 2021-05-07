@@ -7,23 +7,23 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
-  readonly APIUrl="https://localhost:44386/api"
+  readonly APIUrl="https://localhost:8080/api"
   constructor(private http:HttpClient) { }
 
-  getStudentsList():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl+'/student');
+  getEmployeesList():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/employee');
   }
-  getStudent(val:any){
-    return this.http.get<any>(this.APIUrl+'/student/'+val)
+  getEmployee(val:any){
+    return this.http.get<any>(this.APIUrl+'/employee/'+val)
   }
 
-  addStudent(val:any){
-    return this.http.post(this.APIUrl+'/student',val);
+  addEmployee(val:any){
+    return this.http.post(this.APIUrl+'/employee',val);
   }
-  UpdateStudent(id:any,val:any){
-    return this.http.put(this.APIUrl+'/student/'+id,val);
+  UpdateEmployee(id:any,val:any){
+    return this.http.put(this.APIUrl+'/employee/'+id,val);
   }
-  DeleteStudent(val:any){
-    return this.http.delete(this.APIUrl+'/student/'+val);
+  DeleteEmployee(val:any){
+    return this.http.delete(this.APIUrl+'/employee/'+val);
   }
 }

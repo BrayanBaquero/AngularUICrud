@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StudentComponent } from './student/student.component';
-import { ShowStudentComponent } from './student/show-student/show-student.component';
-import { AddEditStudentComponent } from './student/add-edit-student/add-edit-student.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { ShowEmployeeComponent } from './employee/show-employee/show-employee.component';
+import { AddEditEmployeeComponent } from './employee/add-edit-employee/add-edit-employee.component';
 import {SharedService}from './shared.service'
 
 import {HttpClientModule} from '@angular/common/http'
@@ -15,9 +15,9 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
-    StudentComponent,
-    ShowStudentComponent,
-    AddEditStudentComponent
+    EmployeeComponent,
+    ShowEmployeeComponent,
+    AddEditEmployeeComponent
   ],
   imports: [
     BrowserModule,
