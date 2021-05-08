@@ -9,7 +9,8 @@ import { AddEditEmployeeComponent } from './employee/add-edit-employee/add-edit-
 import {SharedService}from './shared.service'
 
 import {HttpClientModule} from '@angular/common/http'
-import {FormsModule,ReactiveFormsModule} from '@angular/forms'
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms'
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

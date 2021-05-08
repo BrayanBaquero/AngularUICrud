@@ -25,9 +25,9 @@ export class AddEditEmployeeComponent implements OnInit {
   addEmployee(){
     var val={
       id:this.id,
-      Name:this.name,
-      Email:this.email,
-      Deparment:this.deparment
+      name:this.name,
+      email:this.email,
+      deparment:this.deparment
     };
     this.service.addEmployee(val).subscribe();
   }
@@ -35,9 +35,9 @@ export class AddEditEmployeeComponent implements OnInit {
   updateEmployee(){
     var val={
       //id:this.id,
-      Name:this.name,
-      Email:this.email,
-      Deparment:this.deparment
+      name:this.name,
+      email:this.email,
+      deparment:this.deparment
     };
     this.service.UpdateEmployee(this.id,val).subscribe(res=>{
       console.log("Respuesta:",res);

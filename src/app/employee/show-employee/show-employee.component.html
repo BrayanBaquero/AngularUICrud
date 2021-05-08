@@ -74,9 +74,9 @@ data-backdrop="static" data-keyboard="false">
     <tbody>
         <tr *ngFor="let dataItem of Employees">
             <td>{{dataItem.id}}</td>
-            <td>{{dataItem.Name}}</td>
-            <td>{{dataItem.Email}}</td>
-            <td>{{dataItem.Deparment}}</td>
+            <td>{{dataItem.name}}</td>
+            <td>{{dataItem.email}}</td>
+            <td>{{dataItem.deparment}}</td>
             <td>
                 <button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" 
                 data-bs-target="#exampleModal" (click)="editClick(dataItem)"
